@@ -1,0 +1,346 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<style>
+	body
+	{
+		background-color:#eee;
+		font-family: 'Lato';		
+	}
+	#hd
+	{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		height: 200px;
+		margin-top: 90px;
+	}	
+	#header
+	{
+		width:100%;
+		height:80px;
+		position:fixed;
+		top:0px;
+		left:0px;
+		background-color:lightgray;
+		display:flex;
+		z-index:2;
+	}
+	#header-img
+	{
+		width:100px;
+		height:auto;
+		display:flex;
+		margin-right:50%
+	}
+	#nav-bar
+	{
+		width:50%;
+		color:black;
+		display:flex;
+		justify-content:space-evenly;
+		align-items:center;
+		font-size:20px;
+		font-variant: small-caps;
+		font-weight: 100
+	}
+	a:active
+	{
+		text-decoration:none;
+		color:black;
+	}
+	a:hover
+	{
+		text-decoration:none;
+		color:red;
+	}
+	a:link
+	{
+		text-decoration:none;
+		color:black;
+	}
+	a:visited
+	{
+		text-decoration:none;
+		color:black;
+	}	
+	#email
+	{
+		width:300px;	
+		height:30px;
+		padding:10px 10px 10px 10px;
+		color:gray;
+		
+	}
+	#submit
+	{
+		max-width: 150px;
+		width: 100%;
+		height: 30px;
+		margin: 15px 0;
+		border: 0;
+		background-color: hsl(0,65%,55%);
+		color:black;
+		font-size:15px;
+		font-weight:900;
+		cursor: pointer;
+	}
+	#h1
+	{
+		font-size:40px;
+		font-stretch: expanded;
+		color:brown;
+		font-style:plasma;
+	}
+	#ftrs
+	{
+		width:70%;
+		margin-left:auto;
+		margin-right:auto;
+		margin-top:50px;
+		display:grid;
+		grid-template-columns:200px 800px;
+		grid-template-rows:150px 150px 150px;
+		color: hsl(0,65%,55%);
+		
+	}
+	#i1
+	{
+		grid-column:1/2;
+		grid-row:1/2;
+		justify-self:center;
+		align-self:center;
+	}	
+	#i2
+	{
+		grid-column:1/2;
+		grid-row:2/3;
+		justify-self:center;
+		align-self:center;
+	}
+	#i3
+	{
+		grid-column:1/2;
+		grid-row:3/4;
+		justify-self:center;
+		align-self:center;
+	}
+	#mh1
+	{
+		font-style:roboto;
+		font-size:20px;
+		grid-column:2/3;
+		grid-row:1/2;
+		justify-self:start;
+		align-self:center;;
+
+		
+	}
+	#mh2
+	{
+		font-style:roboto;
+		font-size:20px;
+		grid-column:2/3;
+		grid-row:2/3;
+		justify-self:start;
+		align-self:center;
+	}
+	#mh3
+	{
+		font-style:roboto;
+		font-size:20px;
+		grid-column:2/3;
+		grid-row:3/4;
+		justify-self:start;
+		align-self:center;
+	}
+	#v
+	{
+		width:40%;
+		margin:100px auto 100px auto;
+		display:flex;
+		align-items:center;
+	}
+	#pricing
+	{
+		width:70%;
+		margin-left:auto;
+		margin-right:auto;
+		display:flex;
+		justify-content:space-evenly;
+		align-items:center;
+	}
+	#box
+	{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		width: calc(100% / 3);
+		margin: 10px;
+		border: 1px solid #000;
+		border-radius: 3px;
+	}
+	#pr
+	{
+		margin:auto;
+		width:100%;
+		height:auto;
+		position:relative;
+		background-color:lightgray;
+		text-align:center;
+		padding:16px 0px;
+		font-size:17px;
+		
+	}
+	ul
+	{
+		list-style-type: none;
+		text-align:center;	
+		padding:5px 5px;
+		font-size:15px;
+	}
+	#sl
+	{
+		width:100px;
+		height:34px;
+		border: 0;
+		margin: 15px 0;
+		background-color: hsl(0,65%,55%);
+		font-size:15px;
+		font-weight: 400;
+		cursor: pointer;
+	}
+	button:hover
+	{
+		animation-name: background-color;
+		animation-duration: 500ms;	
+		animation-fill-mode: forwards;
+	}
+	@keyframes background-color
+	{
+		100%
+		{
+			background-color: hsl(0,65%,63%)
+		}
+	}
+	#abtus
+	{
+		width:auto;
+		height:100px;
+		margin-left:200px;
+		margin-right:200px;
+		background-color:lightgray;	
+	}
+	#bn
+	{
+		display:flex;
+		flex-direction:row;
+		justify-content:flex-end;
+		padding:20px 20px 0px 20px;;
+	}
+	#lnk
+	{
+		padding:0px 20px ;
+	}
+	#cpy
+	{
+		display:flex;
+		justify-content:flex-end;
+		padding:10px 30px ;
+	}
+
+
+</style>
+<div id="hme"></div>
+<html>
+<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+	<div id="hd">
+		<header id="header">
+			<img id="header-img" src="https://cdn.shopify.com/s/files/1/0263/3557/6141/files/dm_logo_-01-01_23278c1e-c372-4244-967d-d0237931a7a7_300x300.png?v=1591835993"></img>
+			<nav id="nav-bar">
+				<a class="nav-link" href="#hme">Home</a>
+				<a class="nav-link" href="#ftr">Features</a>
+				<a class="nav-link" href="#Pricing">Pricing</a>
+				<a class="nav-link" href="#abtus">Disclaimer info</a>
+			</nav>
+		</header>
+		<h1 id="h1">Home made coffee powder</h1>
+		<form id="form" action="/action_page.php" target=" https://www.freecodecamp.com/email-submit">
+			<input type="email" id="email" name="email" placeholder="Enter your email addreess"></input><br>
+			<input type="submit" id="submit" value="GET STARTED"><a href=" https://www.freecodecamp.com/email-submit"></a></input>	
+		</form>	
+	</div><div id="ftr"></div>
+	
+	
+	
+	<div id="ftrs">
+		<img id="i1" style="height:auto ;width:80px;"src="https://www.onlygfx.com/wp-content/uploads/2018/03/best-quality-stamp-4.png"></img>
+		<img id="i2" style="height:auto ;width:80px;"src="https://www.vippng.com/png/full/96-968509_free-shipping-icon-graphic-design.png" ><img>
+		<img id="i3" style="height:auto ;width:80px;"src="https://cdn.freebiesupply.com/logos/large/2x/seattles-best-coffee-logo-png-transparent.png" ></img>
+		
+		<div id="mh1"><h2>Great quality</h2><br>
+		<p style="font-size:18px; margin-top:-46px;color:black;">Our product use the purest beans which is sourced locally. This will increase the longevity of your purchase.<br></p></div>
+		
+		<div id="mh2"><h2>Fast shipping</h2><br>
+		<p style="font-size:18px; margin-top:-46px;color:black;">We make sure you recieve your product as soon as we have finished preparing it. We also provide free returns if you are not satisfied.<br></p></div>
+		
+		<div id="mh3"><h2>Best taste</h2><br>
+		<p style="font-size:18px;margin-top:-46px;color:black;">Taste the best refreshing coffee.The process of making coffee here takes more time as we do not use any kind of adultrant.  <br></p></div>
+	</div>
+	
+	
+	
+	
+	
+	<iframe id="v" width="560" height="315" src="https://www.youtube.com/embed/yNQ23sQ9pxg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+	</iframe><div id="pricin"></div>
+	
+	
+	
+	<div id="Pricing">
+		<div id="box">
+			<h1 id="pr">OND COFFEE</h1>
+			<h2>Rs1299/-</h2>
+			<ul>
+				<li>Chikkoree:30%</li><br>
+				<li>Caffine:60%</li><br>
+				<li>Cocoa:10%</li><br>
+			</ul>	
+			<button id="sl">SELECT</button>
+		</div>
+		<div id="box">
+			<h1 id="pr">INNOND COFFEE</h1>
+			<h2>Rs1399/-</h2>
+			<ul>
+				<li>Chikkoree:20%</li><br>
+				<li>Caffine:70%</li><br>
+				<li>Cocoa:10%</li><br>
+			</ul>	
+			<button id="sl">SELECT</button>
+		</div>
+		<div id="box">
+		<h1 id="pr">MATTOND COFFEE</h1>
+			<h2>Rs1699/-</h2>
+			<ul>
+				<li>Chikkoree:40%</li><br>
+				<li>Caffine:50%</li><br>
+				<li>Cocoa:10%</li><br>
+			</ul>
+			<button id="sl">SELECT</button>
+		</div>
+	</div><div id="abt"></div>
+	
+	
+	
+	
+	<footer id="abtus">
+		<ul id="bn">
+			<li><a id="lnk" href="#">Privacy</a></li>
+			<li><a id="lnk" href="#">About us</a></li>
+			<li><a id="lnk" href="#">Contact</a></li>
+			<li><a id="lnk" href="#">Terms</a></li>	
+		</ul>	
+		<p id="cpy">Copyright 2020</p>	
+	</footer>
+<html>		
